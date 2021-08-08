@@ -7,7 +7,7 @@ body {
   background-color: rgb(156, 248, 183);
 }
 
-#popup-box {
+#popup-box, #popup-box2 {
   z-index: 1;
   position: absolute;
   top: 30%;
