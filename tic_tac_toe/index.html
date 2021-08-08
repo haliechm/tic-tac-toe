@@ -68,37 +68,88 @@
                 <tbody>
                   <!-- top row -->
                   <tr class="border-bot t-row">
-                    <td class="border-rig" id="00" onclick="addCell(this.id)">
+                    <td
+                      class="border-rig"
+                      id="00"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
-                    <td class="border-rig" id="01" onclick="addCell(this.id)">
+                    <td
+                      class="border-rig"
+                      id="01"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
-                    <td id="02" onclick="addCell(this.id)">
+                    <td
+                      id="02"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
                   </tr>
                   <!-- middle row -->
                   <tr class="border-bot t-row">
-                    <td class="border-rig" id="10" onclick="addCell(this.id)">
+                    <td
+                      class="border-rig"
+                      id="10"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
-                    <td class="border-rig" id="11" onclick="addCell(this.id)">
+                    <td
+                      class="border-rig"
+                      id="11"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
-                    <td id="12" onclick="addCell(this.id)">
+                    <td
+                      id="12"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
                   </tr>
                   <!-- bottom row -->
                   <tr class="t-row">
-                    <td class="border-rig" id="20" onclick="addCell(this.id)">
+                    <td
+                      class="border-rig"
+                      id="20"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
-                    <td class="border-rig" id="21" onclick="addCell(this.id)">
+                    <td
+                      class="border-rig"
+                      id="21"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
-                    <td id="22" onclick="addCell(this.id)">
+                    <td
+                      id="22"
+                      onclick="addCell(this.id)"
+                      onmouseover="highlightCell(this.id)"
+                      onmouseout="unhighlightCell(this.id)"
+                    >
                       <img src="" alt="" />
                     </td>
                   </tr>
@@ -109,8 +160,13 @@
           <div class="col order-2"></div>
         </div>
 
-        <!-- reset row -->
-        <div class="row"></div>
+        <!-- sounds to play -->
+        <audio id="sound-O">
+          <source src="/sound/chalk_circle.mp3" />
+        </audio>
+        <audio id="sound-X">
+          <source src="/sound/chalk_x.mp3" />
+        </audio>
       </div>
     </div>
 

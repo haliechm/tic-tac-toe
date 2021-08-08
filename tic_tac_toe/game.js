@@ -37,6 +37,13 @@ let cells = [["avail", "avail", "avail"],
 function addCell(cellNumber) {
     // making sure id is a num (note: adding 1 bc 0 is interpreted as falsey) and round is not over
     if(parseInt(cellNumber) + 1 && !round_over) {
+        // play sound of drawing 
+        if(getCurrentPlayer() === "O") {
+            document.getElementById("sound-O").play();
+        } else {
+            document.getElementById("sound-X").play();
+        }
+
         addImage(cellNumber);
         checkDraw();
         checkWin(cellNumber);
@@ -174,6 +181,19 @@ function nextRoundNo() {
 
 function getCurrentPlayer() {
     return player_x_turn ? player_x : player_o;
+}
+
+// when hovering over cell, check to see if available
+function highlightCell(cellNumber) {
+    if(parseInt(cellNumber) + 1 && !round_over) {
+        document.getElementById(cellNumber).style.backgroundColor="rgb(255, 225, 230)";
+    }
+}
+
+function unhighlightCell(cellNumber) {
+    if(!round_over) {
+        document.getElementById(cellNumber).style.backgroundColor="rgb(156, 248, 183)";
+    }
 }
 
 
