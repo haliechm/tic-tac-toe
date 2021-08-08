@@ -15,10 +15,14 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body class="bg-color">
-    <div class="container mt-4">
-      <!-- next round pop-up box (not displayed) -->
-      <div class="text-center text-white" id="popup-box">
+    <div class="container mt-5">
+      <!-- next round pop-up box (not displayed until button clicked) -->
+      <div class="text-center text-white d-none" id="popup-box">
         <h1 class="py-4">Next Round?</h1>
+        <div class="d-inline-flex">
+          <button class="mr-4" onclick="nextRoundYes()">yes</button>
+          <button onclick="nextRoundNo()">no</button>
+        </div>
       </div>
 
       <div id="will-blur">
@@ -50,11 +54,11 @@
           <!-- scoreboard -->
           <div class="col-md-3 col-12 order-1 order-md-0">
             <div id="scoreboard">
-              <p>X's score: 0</p>
+              <p id="score-X">X's score: 0</p>
               <br />
-              <p>O's score: 0</p>
+              <p id="score-O">O's score: 0</p>
               <br />
-              <p>Draws: 0</p>
+              <p id="score-draws">Draws: 0</p>
             </div>
           </div>
           <!-- game board table -->

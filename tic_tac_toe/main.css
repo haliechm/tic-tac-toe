@@ -10,11 +10,16 @@ body {
 #popup-box {
   z-index: 1;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40%;
+  top: 30%;
+  left: 25%;
+  width: 50%;
   height: 250px;
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgba(0, 0, 0, 0.74);
+}
+
+#popup-box button {
+  font-size: 1.9rem;
+  border-radius: 10%;
 }
 
 .border-bot {
