@@ -7,6 +7,16 @@ body {
   background-color: rgb(156, 248, 183);
 }
 
+#popup-box {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
 .border-bot {
   border-bottom: 10px solid black;
 }
@@ -46,4 +56,13 @@ body {
   font-size: x-large;
   position: absolute;
   top: 25%;
+}
+
+.blurred {
+  /* Any browser which supports CSS3 */
+  filter: blur(5px);
+  /* Firefox version 34 and earlier */
+  filter: url("blur.svg#gaussian_blur");
+  /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
+  -webkit-filter: blur(5px);
 }

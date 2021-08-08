@@ -16,86 +16,98 @@
   </head>
   <body class="bg-color">
     <div class="container mt-4">
-      <!-- title row -->
-      <div class="row">
-        <div
-          class="col text-center"
-          id="top-left"
-          style="font-size: 25px; margin-top: 10px"
-        >
-          X's turn
-        </div>
-        <!-- tic-tac-toe title -->
-        <div class="col-6 col-md-8 text-center">Tic-Tac-Toe</div>
-        <!-- reset button -->
-        <div class="col-3 col-md-2">
-          <button class="bg-color border-0 vertical-align" type="submit">
-            <img src="/image/reset.png" alt="Reset Button" width="40%" />
-          </button>
-        </div>
-      </div>
-      <!-- game board row -->
-      <div class="row mt-5">
-        <!-- scoreboard -->
-        <div class="col-md-3 col-12 order-1 order-md-0">
-          <div id="scoreboard">
-            <p>X's score: 0</p>
-            <br />
-            <p>O's score: 0</p>
-            <br />
-            <p>Draws: 0</p>
-          </div>
-        </div>
-        <!-- game board table -->
-        <div class="col-md-6 col-12 order-0 order-md-1 text-center">
-          <div class="game-table">
-            <table class="table table-borderless">
-              <tbody>
-                <!-- top row -->
-                <tr class="border-bot t-row">
-                  <td class="border-rig" id="00" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                  <td class="border-rig" id="01" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                  <td id="02" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                </tr>
-                <!-- middle row -->
-                <tr class="border-bot t-row">
-                  <td class="border-rig" id="10" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                  <td class="border-rig" id="11" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                  <td id="12" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                </tr>
-                <!-- bottom row -->
-                <tr class="t-row">
-                  <td class="border-rig" id="20" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                  <td class="border-rig" id="21" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                  <td id="22" onclick="addCell(this.id)">
-                    <img src="" alt="" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col order-2"></div>
+      <!-- next round pop-up box (not displayed) -->
+      <div class="text-center text-white" id="popup-box">
+        <h1 class="py-4">Next Round?</h1>
       </div>
 
-      <!-- reset row -->
-      <div class="row"></div>
+      <div id="will-blur">
+        <!-- title row -->
+        <div class="row">
+          <div
+            class="col text-center"
+            id="top-left"
+            style="font-size: 25px; margin-top: 10px"
+          >
+            X's turn
+          </div>
+          <!-- tic-tac-toe title -->
+          <div class="col-6 col-md-8 text-center">Tic-Tac-Toe</div>
+          <!-- reset button -->
+          <div class="col-3 col-md-2">
+            <button
+              class="bg-color border-0 vertical-align"
+              type="submit"
+              onclick="nextRound()"
+            >
+              <img src="/image/reset.png" alt="Reset Button" width="40%" />
+            </button>
+          </div>
+        </div>
+
+        <!-- game board row -->
+        <div class="row mt-5">
+          <!-- scoreboard -->
+          <div class="col-md-3 col-12 order-1 order-md-0">
+            <div id="scoreboard">
+              <p>X's score: 0</p>
+              <br />
+              <p>O's score: 0</p>
+              <br />
+              <p>Draws: 0</p>
+            </div>
+          </div>
+          <!-- game board table -->
+          <div class="col-md-6 col-12 order-0 order-md-1 text-center">
+            <div class="game-table">
+              <table class="table table-borderless">
+                <tbody>
+                  <!-- top row -->
+                  <tr class="border-bot t-row">
+                    <td class="border-rig" id="00" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                    <td class="border-rig" id="01" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                    <td id="02" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                  </tr>
+                  <!-- middle row -->
+                  <tr class="border-bot t-row">
+                    <td class="border-rig" id="10" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                    <td class="border-rig" id="11" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                    <td id="12" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                  </tr>
+                  <!-- bottom row -->
+                  <tr class="t-row">
+                    <td class="border-rig" id="20" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                    <td class="border-rig" id="21" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                    <td id="22" onclick="addCell(this.id)">
+                      <img src="" alt="" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col order-2"></div>
+        </div>
+
+        <!-- reset row -->
+        <div class="row"></div>
+      </div>
     </div>
 
     <!-- javascript files -->

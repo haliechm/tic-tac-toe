@@ -15,14 +15,14 @@ let cells = [["avail", "avail", "avail"],
              ["avail", "avail", "avail"], 
              ["avail", "avail", "avail"]];
 
-// called each time cell is clicked
+// called each time a cell is clicked
 function addCell(cellNumber) {
     // making sure id is a num (note: adding 1 bc 0 is interpreted as falsey)
     if(parseInt(cellNumber) + 1) {
         addImage(cellNumber);
         changeTurns();
-        checkWin(cellNumber);
         checkDraw();
+        checkWin(cellNumber);
     }
 }
 
@@ -39,9 +39,10 @@ function addImage(cellNumber) {
     cell.id = player_x_turn ? player_x : player_o;
 }
 
-
-function checkWin() {
-
+function changeTurns() {
+    player_x_turn = !player_x_turn;
+    curr_player = player_x_turn ? player_x : player_o;
+    document.getElementById("top-left").innerHTML =  `${curr_player}'s turn`
 }
 
 function checkDraw() {
@@ -51,11 +52,33 @@ function checkDraw() {
     document.getElementById("top-left").innerHTML="Draw!";
 }
 
-function changeTurns() {
-    player_x_turn = !player_x_turn;
-    curr_player = player_x_turn ? player_x : player_o;
-    document.getElementById("top-left").innerHTML =  `${curr_player}'s turn`
 
+function checkWin() {
+
+}
+
+
+
+function nextRound() {
+    // blur entire screen
+    document.getElementById("will-blur").classList.add("blurred");
+    
+    // get box to pop up to indicate if next round should start
+}
+
+function nextRoundyYes() {
+    // erase all images from srcs
+
+    // reset double array cells
+
+    // unblur entire screen
+    document.getElementsByClassName("container")[0].classList.remove("blurred");
+
+}
+
+function nextRoundNo() {
+    // unblur entire screen
+    document.getElementsByClassName("container")[0].classList.remove("blurred");
 }
 
 
