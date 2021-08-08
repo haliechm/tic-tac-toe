@@ -38,7 +38,7 @@ body {
 
 .t-row td:hover {
   /* background-color: rgb(255, 225, 230); */
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .t-row .border-rig {

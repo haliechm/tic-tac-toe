@@ -45,8 +45,8 @@ function addCell(cellNumber) {
         }
 
         addImage(cellNumber);
-        checkDraw();
         checkWin(cellNumber);
+        if(!round_over) checkDraw();    // only do this if round is not over (edge case: win but all cells filled up)
         if(!round_over) changeTurns(); 
     }
 }
@@ -75,8 +75,10 @@ function changeTurns() {
 // determines if a tie has occurred
 function checkDraw() {
     for(let i=0; i<cells.length; i++) {
+        console.log("im in here! no draw yet");
         if(cells[i].includes("avail")) return;
     }
+    console.log("im hereeeeeee there's a draw");
     num_of_draws++;
     round_over=true;
     document.getElementById("top-left").innerHTML="Draw!";
@@ -183,17 +185,30 @@ function getCurrentPlayer() {
     return player_x_turn ? player_x : player_o;
 }
 
-// when hovering over cell, check to see if available
-function highlightCell(cellNumber) {
-    if(parseInt(cellNumber) + 1 && !round_over) {
-        document.getElementById(cellNumber).style.backgroundColor="rgb(255, 225, 230)";
-    }
-}
 
-function unhighlightCell(cellNumber) {
-    if(!round_over) {
-        document.getElementById(cellNumber).style.backgroundColor="rgb(156, 248, 183)";
-    }
-}
+/*
+                           EVENT LISTENERS
+ _________________________________________________________________________ 
+ 
+*/
 
+// hightlight cells when hovering 
+document.addEventListener("DOMContentLoaded", function(event) { 
+  let tds = document.getElementsByTagName("td");
+  console.log(tds);
+
+  for (let i = 0; i < tds.length; i++) {
+      tds[i].addEventListener("mouseover", function() {
+          if(parseInt(this.id)+1 && !round_over) {
+            this.style.backgroundColor = "rgb(255, 225, 230)";
+            this.style.cursor = "pointer";
+          }
+      });
+
+      tds[i].addEventListener("mouseout", function() {
+          this.style.backgroundColor = "transparent";
+          this.style.cursor = "auto";
+      });
+  }
+});
 
