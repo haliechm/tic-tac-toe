@@ -1,0 +1,49 @@
+body {
+  font-family: "papyrus";
+  font-size: 40px;
+}
+
+.bg-color {
+  background-color: rgb(156, 248, 183);
+}
+
+.border-bot {
+  border-bottom: 10px solid black;
+}
+
+.t-row {
+  height: 150px;
+}
+
+.t-row td {
+  width: 33.333%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.t-row td:hover {
+  background-color: rgb(255, 225, 230);
+  cursor: pointer;
+}
+
+.t-row .border-rig {
+  border-right: 10px solid black;
+}
+
+.t-row img {
+  width: 50%;
+}
+
+.vertical-align {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#scoreboard {
+  font-size: x-large;
+  position: absolute;
+  top: 25%;
+}
