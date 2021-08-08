@@ -53,6 +53,15 @@ function startGameYes() {
     continuePlay();
 }
 
+// user hits 'no' for starting game
+function startGameNo() {
+    // unblur entire screen
+    document.getElementById("will-blur").classList.remove("blurred");
+
+    // remove pop-up box
+    document.getElementById("popup-box2").classList.add("d-none");
+}
+
 // used only for plays_itself version 
 function continuePlay() {
     if(!round_over) {
