@@ -29,16 +29,6 @@ let auto_tds = ["00", "01", "02",
                 "20", "21", "22"];
 
 
-
-// choose random num, check to see if num in auto_tds
-// if is, then that is the cell number to add
-// add where auto_tds is changed to "not_avail"
-// if not, then rechoose another random number
-// add timer so doesn't happen too fast
-
-
-
-
 /*
                             FUNCTIONS
  _________________________________________________________________________ 
@@ -246,33 +236,4 @@ function getRandomInt(max) {
 }
 
 startGame();
-
-
-
-
-/*
-                           EVENT LISTENERS
- _________________________________________________________________________ 
- 
-*/
-
-// hightlight cells when hovering 
-// document.addEventListener("DOMContentLoaded", function(event) { 
-//   let tds = document.getElementsByTagName("td");
-//   console.log(tds);
-
-//   for (let i = 0; i < tds.length; i++) {
-//       tds[i].addEventListener("mouseover", function() {
-//           if(parseInt(this.id)+1 && !round_over) {
-//             this.style.backgroundColor = "rgb(255, 225, 230)";
-//             this.style.cursor = "pointer";
-//           }
-//       });
-
-//       tds[i].addEventListener("mouseout", function() {
-//           this.style.backgroundColor = "transparent";
-//           this.style.cursor = "auto";
-//       });
-//   }
-// });
 
