@@ -92,8 +92,8 @@ function checkWin(cellNumber) {
         round_over = true;
         let current_player = getCurrentPlayer();
 
-        var current_player_score= player_x_turn ? player_x_score++ : player_o_score++;
-        current_player_score++;
+        var current_player_score= player_x_turn ? ++player_x_score : ++player_o_score;
+        // current_player_score++;
 
         document.getElementById("top-left").innerHTML=`${current_player} wins!`;
         document.getElementById(`score-${current_player}`).innerHTML=`${current_player}'s score: ${current_player_score}`;
